@@ -1,21 +1,21 @@
 
 import random
 
-difficulty = str (input("pick a diffculty easy or hard ").lower())
+difficulty = str (input("pick a diffculty easy or hard - ").lower())
 
 if(difficulty=="hard"):
     Number_of_attempts=5
 else:
-    Number_of_attempts = 10
+    Number_of_attempts = 10 # For easy
 
 def guess_number(no_of_attempts):
-    choice = random.randint(1,100)
-    print("Choice -" + str(choice))
+    choice = random.randint(1,100) #Picks a random number between 1 to 100.
+    # print("Choice -" + str(choice))
     while no_of_attempts>0:
-        guess_num =  int(input("Pick a number between 1 to 100"))
+        guess_num =  int(input("Pick a number between 1 to 100 - "))
         if(choice == guess_num):
             print("Congratulations, You guessed it correctly.")
-            break
+            break #Exits the loop if guessed correctly.
         elif(choice> guess_num):
             print("Your guess is too low")
             no_of_attempts-=1
